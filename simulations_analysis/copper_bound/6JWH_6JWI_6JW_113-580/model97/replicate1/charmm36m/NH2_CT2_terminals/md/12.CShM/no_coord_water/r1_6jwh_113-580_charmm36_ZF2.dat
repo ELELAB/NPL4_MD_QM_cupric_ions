@@ -1,0 +1,6 @@
+$ coordination ZF2
+! keyword, name of coords. file
+%external traj.ZF2.shp
+%fullout
+4 1
+1 2 3 4 

@@ -1,0 +1,6 @@
+$ tetrahedral Cu
+! keyword, name of coords. file
+%external   opt3_cys_zf1_Cu
+%fullout
+3 1
+1 2 3 4

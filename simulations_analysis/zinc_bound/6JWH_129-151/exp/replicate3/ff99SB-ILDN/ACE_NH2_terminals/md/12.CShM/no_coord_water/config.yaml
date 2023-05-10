@@ -1,0 +1,25 @@
+ZF1:
+    ZN:
+        central: 'True'
+        selection : name ZN
+        element : Zn
+
+    137SG:
+        selection : resnum 137 and name SG
+        element : S
+
+    139NE2:
+        selection : resnum 139 and name NE2
+        element : 'N'
+
+    145SG:
+        selection : resnum 145 and name SG
+        element : S
+
+    148SG:
+        selection : resnum 148 and name SG
+        element : S
+
+
+
+

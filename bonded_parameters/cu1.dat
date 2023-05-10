@@ -1,0 +1,29 @@
+cu1.dat, LR Aug 26-2002: parameters for U1 (copper)
+MASS
+U1    63.546      .000     Cu1+
+
+BOND
+U1-S      22.17      2.87  Cu-SD   de Kerpel, Ryde, Proteins 36, 157 (1999)
+U1-SH     50.61      2.17  Cu-SG   dtto
+U1-NB     21.25      2.26  Cu-NE2  dtto
+
+ANGL
+U1-S -CT     6.0      113.81   dtto
+U1-SH-CT    18.0      101.31   dtto
+U1-NB-CR    25.6      122.10   dtto
+U1-NB-CC    25.6      122.90   dtto
+S -U1-SH    27.0      113.39   dtto
+S -U1-NB    19.4       96.50   dtto
+SH-U1-NB    19.1      122.50   dtto
+NB-U1-NB    26.7       99.07   dtto
+
+DIHE
+X -U1-S -X    1    0.00          0.0             3.         Dummy
+X -U1-SH-X    1    0.00          0.0             3.         Dummy
+X -U1-NB-X    1    0.00          0.0             3.         Dummy
+ 
+NONB
+  U1        1.17      1.140000           Cu1+ from Bartolotti JCC 12(91)1125
+
+
+

@@ -1,0 +1,6 @@
+$ tetrahedral Zn
+! keyword, name of coords. file
+%external   opt_freq_zf2_Zn
+%fullout
+4 1
+1 2 3 4

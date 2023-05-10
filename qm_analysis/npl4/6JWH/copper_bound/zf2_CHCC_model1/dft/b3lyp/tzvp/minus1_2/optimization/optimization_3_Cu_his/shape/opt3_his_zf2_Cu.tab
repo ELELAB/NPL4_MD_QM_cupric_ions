@@ -1,0 +1,15 @@
+--------------------------------------------------------------------------------
+S H A P E   v2.1         Continuous Shape Measures calculation
+(c) 2013  Electronic Structure Group, Universitat de Barcelona
+                   Contact:  llunell@ub.edu                   
+--------------------------------------------------------------------------------
+
+tetrahedral Zn 
+
+TP-3            1 D3h   Trigonal                                           
+vT-3            2 C3v   Vacant tetrahedron                                 
+fvOC-3          3 C3v   fac-Trivacant octahedron                           
+mvOC-3          4 C2v   mer-Trivacant octahedron                           
+
+Structure [ML3 ]         TP-3         vT-3       fvOC-3       mvOC-3
+ 0              ,       1.852,       4.735,      12.535,       3.679
