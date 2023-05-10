@@ -1,0 +1,82 @@
+reference:
+    HIS: 2.15 # Average cysteines values between ZF1-ZF2 Qm calculations
+    CYS: 2.38 # Average histidine values between ZF1-ZF2 Qm calculations
+
+out_name1: FigureS4.pdf
+
+md:
+    ZF1:
+        his139:
+            charmm36-rep1:
+                replicate1/charmm36m/NH2_CT2_terminals/md/ZN_H139.xvg
+            charmm36-rep2:
+                replicate2/charmm36m/NH2_CT2_terminals/md/ZN_H139.xvg
+            charmm36-rep3:
+                replicate3/charmm36m/NH2_CT2_terminals/md/ZN_H139.xvg
+            ff99SB*-ILDN-rep1:
+                replicate1/ff99SBstar-ILDN/ACE_NH2_terminal/md/ZN_H139.xvg
+        cys137:
+            charmm36-rep1:
+                replicate1/charmm36m/NH2_CT2_terminals/md/ZN_C137.xvg
+            charmm36-rep2:
+                replicate2/charmm36m/NH2_CT2_terminals/md/ZN_C137.xvg
+            charmm36-rep3:
+                replicate3/charmm36m/NH2_CT2_terminals/md/ZN_C137.xvg
+            ff99SB*-ILDN-rep1:
+                replicate1/ff99SBstar-ILDN/ACE_NH2_terminal/md/ZN_C137.xvg
+        cys145:
+            charmm36-rep1:
+                replicate1/charmm36m/NH2_CT2_terminals/md/ZN_C145.xvg
+            charmm36-rep2:
+                replicate2/charmm36m/NH2_CT2_terminals/md/ZN_C145.xvg
+            charmm36-rep3:
+                replicate3/charmm36m/NH2_CT2_terminals/md/ZN_C145.xvg
+            ff99SB*-ILDN-rep1:
+                replicate1/ff99SBstar-ILDN/ACE_NH2_terminal/md/ZN_C145.xvg
+        cys148:
+            charmm36-rep1:
+                replicate1/charmm36m/NH2_CT2_terminals/md/ZN_C148.xvg
+            charmm36-rep2:
+                replicate2/charmm36m/NH2_CT2_terminals/md/ZN_C148.xvg
+            charmm36-rep3:
+                replicate3/charmm36m/NH2_CT2_terminals/md/ZN_C148.xvg
+            ff99SB*-ILDN-rep1:
+                replicate1/ff99SBstar-ILDN/ACE_NH2_terminal/md/ZN_C148.xvg
+
+    ZF2:
+        his208:
+            charmm36-rep1:
+                replicate1/charmm36m/NH2_CT2_terminals/md/ZN_H208.xvg
+            charmm36-rep2:
+                replicate2/charmm36m/NH2_CT2_terminals/md/ZN_H208.xvg
+            charmm36-rep3:
+                replicate3/charmm36m/NH2_CT2_terminals/md/ZN_H208.xvg
+            ff99SB*-ILDN-rep1:
+                replicate1/ff99SBstar-ILDN/ACE_NH2_terminal/md/ZN_H208.xvg
+        cys204:
+            charmm36-rep1:
+                replicate1/charmm36m/NH2_CT2_terminals/md/ZN_C204.xvg
+            charmm36-rep2:
+                replicate2/charmm36m/NH2_CT2_terminals/md/ZN_C204.xvg
+            charmm36-rep3:
+                replicate3/charmm36m/NH2_CT2_terminals/md/ZN_C204.xvg
+            ff99SB*-ILDN-rep1:
+                replicate1/ff99SBstar-ILDN/ACE_NH2_terminal/md/ZN_C204.xvg
+        cys216:
+            charmm36-rep1:
+                replicate1/charmm36m/NH2_CT2_terminals/md/ZN_C216.xvg
+            charmm36-rep2:
+                replicate2/charmm36m/NH2_CT2_terminals/md/ZN_C216.xvg
+            charmm36-rep3:
+                replicate3/charmm36m/NH2_CT2_terminals/md/ZN_C216.xvg
+            ff99SB*-ILDN-rep1:
+                replicate1/ff99SBstar-ILDN/ACE_NH2_terminal/md/ZN_C216.xvg
+        cys219:
+            charmm36-rep1:
+                replicate1/charmm36m/NH2_CT2_terminals/md/ZN_C219.xvg
+            charmm36-rep2:
+                replicate2/charmm36m/NH2_CT2_terminals/md/ZN_C219.xvg
+            charmm36-rep3:
+                replicate3/charmm36m/NH2_CT2_terminals/md/ZN_C219.xvg
+            ff99SB*-ILDN-rep1:
+                replicate1/ff99SBstar-ILDN/ACE_NH2_terminal/md/ZN_C219.xvg

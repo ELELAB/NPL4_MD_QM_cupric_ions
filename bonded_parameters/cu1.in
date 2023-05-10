@@ -1,0 +1,15 @@
+    0    0    2
+
+Cu1: Copper 1+; Charge=+1, type=U1, 27/8-02
+cu1.res
+CU1  INT 0
+CHANGE   OMIT DU  BEG
+0.0
+1  DUMM  DU    M    -3.3260 -1.5480   .0000   .0000
+2  DUMM  DU    M    -1.8770 -1.5480   .0000   .0000
+3  DUMM  DU    M    -1.3290  -.1280   .0000   .0000
+4  CU    U1    M      .0000   .0000   .0000  1.0000
+
+
+DONE
+STOP

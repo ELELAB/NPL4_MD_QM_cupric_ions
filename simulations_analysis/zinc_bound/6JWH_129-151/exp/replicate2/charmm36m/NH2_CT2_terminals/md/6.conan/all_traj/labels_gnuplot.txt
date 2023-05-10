@@ -1,0 +1,10 @@
+#Npl4 zinc finger 1 
+#Gnuplot syntax (from png terminal) is understood! Spaces in names are allowed!
+# If the name does not fit in the plot, you will need to make them shorter.
+# Not all residues need to be assigned to a domain.
+#   1   25 "{/Symbol a}_1"
+    9    9 "C137"
+   11   11 "H139"
+   17   17 "C145"
+   20   20 "C148"
+   24   24 "Zn" 

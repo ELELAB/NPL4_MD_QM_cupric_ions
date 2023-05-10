@@ -1,0 +1,15 @@
+--------------------------------------------------------------------------------
+S H A P E   v2.1         Continuous Shape Measures calculation
+(c) 2013  Electronic Structure Group, Universitat de Barcelona
+                   Contact:  llunell@ub.edu                   
+--------------------------------------------------------------------------------
+
+tetrahedral Zn 
+
+SP-4            1 D4h   Square                                             
+T-4             2 Td    Tetrahedron                                        
+SS-4            3 C2v   Seesaw                                             
+vTBPY-4         4 C3v   Vacant trigonal bipyramid                          
+
+Structure [ML4 ]         SP-4          T-4         SS-4      vTBPY-4
+ 0              ,      14.463,       5.699,       3.902,       7.392

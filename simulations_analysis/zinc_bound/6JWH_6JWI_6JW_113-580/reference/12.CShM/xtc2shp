@@ -1,0 +1,114 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+import MDAnalysis as mda
+import sys
+import argparse
+from collections import OrderedDict
+import os
+import yaml
+
+def out_shp(universe,
+            dictionary,
+            outfile):
+    with open(outfile, 'w') as fh:
+        for ts in universe.trajectory:
+            fh.write("%d\n" % (ts.dt*ts.frame))
+            for k,v in dictionary.items():
+                pos = v[1].positions[0]
+                x = "%.4f" % pos[0]
+                y = "%.4f" % pos[1]
+                z = "%.4f" % pos[2]
+                fh.write( "  " + v[0]+ 
+                          "\t" + x +  
+                          "\t" + y +  
+                          "\t" + z + '\n')
+
+def out_ref(universe,
+            dictionary,
+            outfile):
+    with open(outfile, 'w') as fh:
+        for ts in u.trajectory:
+            if ts.frame == 0:
+                fh.write("PDB\n")
+                fh.write("Reference structure\n")
+                fh.write("Tetrahedral\n")
+                for k,v in atoms.items():
+                    x = "%.4f" % v[1].positions[0][0]
+                    y = "%.4f" % v[1].positions[0][1]
+                    z = "%.4f" % v[1].positions[0][2]
+                    try:
+                        central = v[2]
+                        if v[2]:
+                            central_atom = v[0]
+                            # save coordinate of central atom
+                            x_c = "%.4f" % v[1].positions[0][0] 
+                            y_c = "%.4f" % v[1].positions[0][1]
+                            z_c = "%.4f" % v[1].positions[0][2]
+                    except:
+                        fh.write( "  " + v[0]+ 
+                                "\t" + x +  
+                                "\t" + y +  
+                                "\t" + z + '\n')
+                # central atom must be the last line                                 
+                fh.write( "  " + central_atom + 
+                          "\t" + x_c +  
+                          "\t" + y_c +  
+                          "\t" + z_c + '\n')
+            else : break
+                                    
+    
+
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('top', type=str, help="Topology file")
+    parser.add_argument('xtc', type=str, help="Trajectory file")
+    parser.add_argument('-c', dest='config',type=str, help="Configuration file")
+    parser.add_argument('-o',  dest='outfile', type=str, help="output file name")
+    args = parser.parse_args()
+
+    topol = args.top
+    traj = args.xtc
+    config = args.config
+    outfile = args.outfile
+    
+    # load config file
+    with open(config) as conf:
+            parsed_yaml = yaml.load(conf, 
+                                    Loader=yaml.FullLoader)
+    # MDA Universe
+    u = mda.Universe(args.top, args.xtc)
+    
+    # Parse selections 
+    zf_d = OrderedDict()
+    for zfs in parsed_yaml:
+        atoms = OrderedDict()
+        for atom in parsed_yaml[zfs]:
+            selstr = parsed_yaml[zfs][atom]['selection']
+            element = parsed_yaml[zfs][atom]['element']
+            sel = u.select_atoms(selstr)
+            if len(sel) != 1:
+                print("ERROR: selection %{atom} resulted in more than one atom; exiting" % atom)
+                exit()
+            try:
+                central = parsed_yaml[zfs][atom]['central']
+                atoms[atom] = (element, sel,bool(central))
+            except:
+                atoms[atom] = (element, sel)
+        zf_d[zfs]=atoms
+        
+        # handle different outfile
+    if args.outfile.endswith('shp'):
+        for zfs in parsed_yaml:
+            out_shp(u,zf_d[zfs],outfile.rstrip('shp')+zfs+".shp")
+    elif args.outfile.endswith('ref'):
+        out_ref(u,zf_d,outfile+zfs+".ref")            
+    else : 
+        print('Error in the output file extension')
+        sys.exit(1)        
+                                        
+                                        
+                                        
+

@@ -1,0 +1,36 @@
+#Requiremnts for Shape analysis
+xtc2shp  #for input generation
+config.yaml
+avg_plotting.py #for plotting and averages 
+
+#to run
+
+
+bash run_shape.sh ../../../../../../../../../simulations/zinc_bound/6JWH_129-151/exp/replicate1/charmm36m/NH2_CT2_terminals/md/Mol_An/update.gro  ../../../../../../../../../simulations/zinc_bound/6JWH_129-151/exp/replicate1/charmm36m/NH2_CT2_terminals/md/Mol_An/center_traj.xtc 
+
+#It will use the gro and xtc to build an MDanalysis universe and extract the coordinates and a reference structure of the atom ligands and the centre of coordination specified in the geometries.ini file.
+#The 'zn' simply indicates the centre of the coordination, in our case a Zinc ion.
+
+NOTES
+
+#In cases for which the coordination changes i.e 3 atoms coordinating a metal instead of 4g, the user will need to manually modify run_shape.sh
+accordingly in the generation of the dat file and plotting (For more on input file of Shape software loook : http://www.ee.ub.edu/index.php?option=com_jdownloads&Itemid=529&view=viewcategory&catid=3 ):
+
+
+
+Example :
+----------------
+
+$ tetrahedral Zn 		   
+! keyword, name of coords. file    
+%external traj.shp		   
+%reference ref_geometries.ref      
+%fullout                           
+3 1				   
+1 2 3 4 0 			   
+
+##### for plotting 
+
+
+python avg_plotting.py  -i *.tab -p -b -c Trigonal planar Pyramid fac-Trivacant octahedron mer-Trivacant octahedron Coord-PDB -t "title" -o "out_name"
+
